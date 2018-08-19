@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const toMs = require('../src/to-ms.js')
+const toMs = require('../src/to-mils.js')
 
 const msInDay = 86400000
 const msInHour = 3600000
