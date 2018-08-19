@@ -1,5 +1,5 @@
 {
-  "name": "to-ms",
+  "name": "to-mils",
   "version": "1.0.0",
   "main": "src/to-ms.js",
   "repository": "git@github.com:matthewnitschke/to-ms.git",
