@@ -1,6 +1,6 @@
 {
   "name": "to-mils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/to-ms.js",
   "repository": "git@github.com:matthewnitschke/to-ms.git",
   "author": "Matthew <matthewcnitschke@gmail.com>",
