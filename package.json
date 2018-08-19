@@ -1,7 +1,7 @@
 {
   "name": "to-ms",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/to-ms.js",
   "repository": "git@github.com:matthewnitschke/to-ms.git",
   "author": "Matthew <matthewcnitschke@gmail.com>",
   "license": "MIT",
