@@ -1,7 +1,8 @@
 {
   "name": "to-mils",
   "version": "1.0.1",
-  "main": "src/to-ms.js",
+  "main": "./src/to-mils.js",
+  "description": "small library to convert english to milliseconds",
   "repository": "git@github.com:matthewnitschke/to-ms.git",
   "author": "Matthew <matthewcnitschke@gmail.com>",
   "license": "MIT",
