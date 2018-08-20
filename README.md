@@ -1,5 +1,12 @@
 # to-mils
-small module to convert english to milliseconds
+to-mils is a small module to convert english to milliseconds. 
+
+it is specifically designed to be used by `setTimeout()` and `setInterval()`
+```js
+setTimeout(() =>{
+  console.log('Hey!')
+}, toMils('10 min'))
+```
 
 # Installation
 Install with yarn or npm
