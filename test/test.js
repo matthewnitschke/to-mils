@@ -14,9 +14,9 @@ describe('Tests', () => {
 		expect(toMs('1days')).to.equal(msInDay, '1days')
 
 		expect(toMs('3 days')).to.equal(msInDay * 3, '3 days')
-		// expect(toMs('1.45 days')).to.equal(msInDay * 1.45, '1.45 day')
-		// expect(toMs('.15 days')).to.equal(msInDay * 0.15, '.15 days')
-		// expect(toMs('0.15 days')).to.equal(msInDay * 0.15, '0.15 days')
+		expect(toMs('1.45 days')).to.equal(msInDay * 1.45, '1.45 day')
+		expect(toMs('.15 days')).to.equal(msInDay * 0.15, '.15 days')
+		expect(toMs('0.15 days')).to.equal(msInDay * 0.15, '0.15 days')
 	})
 
 	it('should test hours to ms', () => {
@@ -30,9 +30,9 @@ describe('Tests', () => {
 		expect(toMs('1hours')).to.equal(msInHour, '1hours')
 
 		expect(toMs('2 hr')).to.equal(msInHour * 2, '2 hr')
-		// expect(toMs('2.34 hr')).to.equal(msInHour * 2.34, '2.34 hr')
-		// expect(toMs('.62 hr')).to.equal(msInHour * 0.62, '.62 hr')
-		// expect(toMs('0.54 hr')).to.equal(msInHour * 0.54, '0.54 hr')
+		expect(toMs('2.34 hr')).to.equal(msInHour * 2.34, '2.34 hr')
+		expect(toMs('.62 hr')).to.equal(msInHour * 0.62, '.62 hr')
+		expect(toMs('0.54 hr')).to.equal(msInHour * 0.54, '0.54 hr')
 	})
 
 	it('should test minutes to ms', () => {
@@ -44,9 +44,9 @@ describe('Tests', () => {
 		expect(toMs('1minutes')).to.equal(msInMin, '1minutes')
 
 		expect(toMs('2 min')).to.equal(msInMin * 2, '2 min')
-		// expect(toMs('2.34 min')).to.equal(msInMin * 2.34, '2.34 min')
-		// expect(toMs('.62 min')).to.equal(msInMin * 0.62, '.62 min')
-		// expect(toMs('0.54 min')).to.equal(msInMin * 0.54, '.54 min')
+		expect(toMs('2.34 min')).to.equal(msInMin * 2.34, '2.34 min')
+		expect(toMs('.62 min')).to.equal(msInMin * 0.62, '.62 min')
+		expect(toMs('0.54 min')).to.equal(msInMin * 0.54, '.54 min')
 	})
 
 	it('should test seconds to ms', () => {
@@ -58,8 +58,8 @@ describe('Tests', () => {
 		expect(toMs('1seconds')).to.equal(msInSec, '1seconds')
 
 		expect(toMs('6 sec')).to.equal(msInSec * 6, '6 sec')
-		// expect(toMs('3.22 sec')).to.equal(msInSec * 3.22, '3.22 sec')
-		// expect(toMs('.62 sec')).to.equal(msInSec * 0.62, '.62 sec')
-		// expect(toMs('0.54 sec')).to.equal(msInSec * 0.54, '0.54 sec')
+		expect(toMs('3.22 sec')).to.equal(msInSec * 3.22, '3.22 sec')
+		expect(toMs('.62 sec')).to.equal(msInSec * 0.62, '.62 sec')
+		expect(toMs('0.54 sec')).to.equal(msInSec * 0.54, '0.54 sec')
 	})
 })
