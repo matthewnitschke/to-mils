@@ -1,5 +1,5 @@
 module.exports = (input) => {
-    let numbers = parseInt(/\d+/gm.exec(input)[0])
+    let numbers = parseFloat(/[\d\.]+/gm.exec(input)[0])
     let letters = (/[A-z ]+/gm.exec(input)[0]).replace(/[ ]/gm, '')
 
     if (letters == "day" || letters == "days"){
