@@ -62,4 +62,47 @@ describe('Tests', () => {
 		expect(toMs('.62 sec')).to.equal(msInSec * 0.62, '.62 sec')
 		expect(toMs('0.54 sec')).to.equal(msInSec * 0.54, '0.54 sec')
 	})
+
+	it('should test and operator functionality', () => {
+		expect(toMs('1 day and 1 day')).to.equal((msInDay + msInDay), '1 day and 1 day')
+		expect(toMs('1 day and 1 hour')).to.equal((msInDay + msInHour), '1 day and 1 hour')
+		expect(toMs('1 day and 1 min')).to.equal((msInDay + msInMin), '1 day and 1 min')
+		expect(toMs('1 day and 1 sec')).to.equal((msInDay + msInSec), '1 day and 1 sec')
+
+		expect(toMs('1 hour and 1 day')).to.equal((msInHour + msInDay), '1 hour and 1 day')
+		expect(toMs('1 hour and 1 hour')).to.equal((msInHour + msInHour), '1 hour and 1 hour')
+		expect(toMs('1 hour and 1 min')).to.equal((msInHour + msInMin), '1 hour and 1 min')
+		expect(toMs('1 hour and 1 sec')).to.equal((msInHour + msInSec), '1 hour and 1 sec')
+
+		expect(toMs('1 min and 1 day')).to.equal((msInMin + msInDay), '1 min and 1 day')
+		expect(toMs('1 min and 1 hour')).to.equal((msInMin + msInHour), '1 min and 1 hour')
+		expect(toMs('1 min and 1 min')).to.equal((msInMin + msInMin), '1 min and 1 min')
+		expect(toMs('1 min and 1 sec')).to.equal((msInMin + msInSec), '1 min and 1 sec')
+		
+		expect(toMs('1 sec and 1 day')).to.equal((msInSec + msInDay), '1 sec and 1 day')
+		expect(toMs('1 sec and 1 hour')).to.equal((msInSec + msInHour), '1 sec and 1 hour')
+		expect(toMs('1 sec and 1 min')).to.equal((msInSec + msInMin), '1 sec and 1 min')
+		expect(toMs('1 sec and 1 sec')).to.equal((msInSec + msInSec), '1 sec and 1 sec')
+
+		expect(toMs('1.5 days and 1.45 days')).to.equal((msInDay * 1.5 + msInDay * 1.45), '1.5 days and 1.45 days')
+		expect(toMs('1.5 days and 1.45 hours')).to.equal((msInDay * 1.5 + msInHour * 1.45), '1.5 days and 1.45 hours')
+		expect(toMs('1.5 days and 1.45 mins')).to.equal((msInDay * 1.5 + msInMin * 1.45), '1.5 days and 1.45 mins')
+		expect(toMs('1.5 days and 1.45 secs')).to.equal((msInDay * 1.5 + msInSec * 1.45), '1.5 days and 1.45 secs')
+
+		expect(toMs('1 day and 1 hour and 1 min and 1 sec')).to.equal((msInDay + msInHour + msInMin + msInSec), '1 day and 1 hour and 1 min and 1 sec')
+	})
+
+	it('should test & operator functionality', () => {
+		expect(toMs('1 day & 1 day')).to.equal((msInDay + msInDay), '1 day & 1 day')
+		expect(toMs('1 day & 1 hour')).to.equal((msInDay + msInHour), '1 day & 1 hour')
+		expect(toMs('1 day & 1 min')).to.equal((msInDay + msInMin), '1 day & 1 min')
+		expect(toMs('1 day & 1 sec')).to.equal((msInDay + msInSec), '1 day & 1 sec')
+	})
+
+	it('should test & operator with the and operator', () => {
+		expect(toMs('1 day and 1 hour & 1 min')).to.equal((msInDay + msInHour + msInMin), '1 day and 1 hour & 1 min')
+		expect(toMs('1 day & 1 hour and 1 min')).to.equal((msInDay + msInHour + msInMin), '1 day & 1 hour and 1 min')
+		expect(toMs('1 day & 1 hour and 1 min & 1 second')).to.equal((msInDay + msInHour + msInMin + msInSec), '1 day & 1 hour and 1 min & 1 second')
+		expect(toMs('1 day and 1 hour & 1 min and 1 second')).to.equal((msInDay + msInHour + msInMin + msInSec), '1 day and 1 sec & 1 min and 1 second')
+	})
 })
