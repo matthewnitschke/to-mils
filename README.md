@@ -5,7 +5,11 @@ it is specifically designed to be used by `setTimeout()` and `setInterval()`
 ```js
 setTimeout(() =>{
   console.log('Hey!')
-}, toMils('10 min'))
+}, toMils('10 min'));
+
+setTimeout(() =>{
+  console.log('Hey!')
+}, toMils('1 hour and 10 minutes'));
 ```
 
 # Installation
@@ -18,6 +22,6 @@ yarn add to-mils
 ```js
 const toMils = require('to-mils')
 
-console.log(toMils('2 hrs'))
+console.log(toMils('2 hrs'));
 ```
 
