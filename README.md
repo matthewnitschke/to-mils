@@ -6,6 +6,10 @@ it is specifically designed to be used by `setTimeout()` and `setInterval()`
 setTimeout(() =>{
   console.log('Hey!')
 }, toMils('10 min'))
+
+setTimeout(() =>{
+  console.log('Hey!')
+}, toMils('1 hour and 10 minutes'))
 ```
 
 # Installation
